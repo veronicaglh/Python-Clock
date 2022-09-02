@@ -87,3 +87,6 @@ while True:
     window.update()
     pennie.clear()
     time.sleep(1)
+turtle.done()
+
+
