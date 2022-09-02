@@ -24,3 +24,27 @@ title.penup()
 title.goto(-30,150)
 title.pendown()
 title.write("A working clock",font=("Calibri",13, "italic"))
+
+# Function to draw the clock
+def draw_clock(hour, minute, second):
+    pennie.penup()
+    pennie.goto(0, 120)
+    pennie.setheading(180)
+    pennie.pendown()
+    pennie.pensize(3)
+    pennie.circle(120)
+    pennie.penup()
+    pennie.goto(0, 0)
+    pennie.setheading(90)
+
+    for _ in range(0, 13):
+        pennie.forward(90)
+        pennie.pendown()
+        pennie.write(_, font=('Ravie', '10'), align='center')
+        pennie.penup()
+        pennie.forward(5)
+        pennie.pendown()
+        pennie.forward(5)
+        pennie.penup()
+        pennie.goto(0, 0)
+        pennie.right(30)
