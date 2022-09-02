@@ -77,3 +77,13 @@ def draw_clock(hour, minute, second):
     pennie.right(angle)
     pennie.pendown()
     pennie.forward(30)
+
+while True:
+    hour = int(time.strftime("%I"))
+    minute = int(time.strftime("%M"))
+    second = int(time.strftime("%S"))
+
+    draw_clock(hour, minute, second)
+    window.update()
+    pennie.clear()
+    time.sleep(1)
